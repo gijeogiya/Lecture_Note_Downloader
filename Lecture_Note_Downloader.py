@@ -18,10 +18,9 @@ sleep(0.5)
 
 login()
 
-total_page = 54
+total_page = '이곳에 강의노트의 총 페이지를 입력하세요'
 
 for idx in range(1, total_page + 1):  # 페이지를 띄우는 작업을 페이지 인덱스 마다 반복
     idx_str = str(idx).zfill(4)  # 0001, 0002, 0003 ... 등의 형태로 문자열을 변환
-    driver.execute_script(
-        f'window.open("https://edu.ssafy.com/data/upload_files/crossUpload/openLrn/ebook/unzip/A2022040610595166300/assets/page-images/page-9aa9a3c9-51dc16b0-{idx_str}");')  # 자바 스크립트 형태로 새 탭을 띄워 주는 형식
+    driver.execute_script(f'window.open("이곳에 강의노트 이미지 주소를 입력하세요-{idx_str}.jpg");')  # 자바 스크립트 형태로 새 탭을 띄워 주는 형식
     sleep(0.5)
